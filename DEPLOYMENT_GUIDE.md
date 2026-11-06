@@ -82,26 +82,24 @@ git add .
 git commit -m "feat: ระบบรับสมัครเรียนออนไลน์ (โควตา) ๒๕๗๐ วท.ท่าหลวงซิเมนต์ไทยอนุสรณ์"
 ```
 
-### ๔.๒ สร้าง Repository บน GitHub และ Push โค้ด
+### ๔.๒ เชื่อมโยงและ Push โค้ดไปยัง GitHub Repository
+Repository ได้รับการเชื่อมโยงและ Push ไปยัง:
+`https://github.com/jarenchai512-collab/admit.git`
+
 ```bash
-# สร้าง Repository ใหม่บน GitHub เช่น ttc-quota-admission-2570
-# จากนั้นเชื่อมโยง Remote และ Push:
-git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/<REPOSITORY_NAME>.git
+git remote add origin https://github.com/jarenchai512-collab/admit.git
 git branch -M main
 git push -u origin main
 ```
 
-*(หรือหากติดตั้ง GitHub CLI: `gh repo create ttc-quota-admission-2570 --public --source=. --remote=origin --push`)*
-
 ### ๔.๓ เปิดใช้งาน GitHub Pages สำหรับเผยแพร่เว็บ
-1. ไปที่หน้า Repository ของท่านบน GitHub
-2. ไปที่แท็บ **Settings** ➔ เมนูด้านซ้ายเลือก **Pages**
-3. ภายใต้หัวข้อ **Build and deployment**:
-   * **Source:** เลือก `Deploy from a branch`
-   * **Branch:** เลือก `main` และโฟลเดอร์ `/ (root)`
-4. คลิก **Save**
-5. รอประมาณ ๑-๒ นาที เว็บไซต์จะออนไลน์พร้อมใช้งานทันทีที่:
-   `https://<YOUR_GITHUB_USERNAME>.github.io/<REPOSITORY_NAME>/`
+1. ไปที่หน้า Repository บน GitHub: [https://github.com/jarenchai512-collab/admit/settings/pages](https://github.com/jarenchai512-collab/admit/settings/pages)
+2. ภายใต้หัวข้อ **Build and deployment**:
+   * **Source:** สามารถเลือกได้ ๒ รูปแบบ:
+     - **GitHub Actions:** ระบบได้เตรียมไฟล์ Workflow อัตโนมัติไว้ให้เรียบร้อยแล้ว
+     - **Deploy from a branch:** เลือก branch `main` และโฟลเดอร์ `/ (root)` แล้วกด **Save**
+3. เมื่อเปิดใช้งาน เว็บไซต์จะออนไลน์พร้อมใช้งานทันทีที่:
+   **[https://jarenchai512-collab.github.io/admit/](https://jarenchai512-collab.github.io/admit/)**
 
 ---
 

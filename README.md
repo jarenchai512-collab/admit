@@ -2,6 +2,9 @@
 ## วิทยาลัยเทคนิคท่าหลวงซิเมนต์ไทยอนุสรณ์
 ### สังกัดสำนักงานคณะกรรมการการอาชีวศึกษา กระทรวงศึกษาธิการ
 
+- **GitHub Repository:** [https://github.com/jarenchai512-collab/admit](https://github.com/jarenchai512-collab/admit)
+- **เว็บไซต์ออนไลน์ (GitHub Pages):** [https://jarenchai512-collab.github.io/admit/](https://jarenchai512-collab.github.io/admit/)
+
 เว็บแอปพลิเคชันระบบรับสมัครเรียนออนไลน์ ออกแบบตามมาตรฐานหน่วยงานราชการและสถานศึกษา เรียบ สุภาพ น่าเชื่อถือ ใช้งานได้สมบูรณ์แบบทั้งบนคอมพิวเตอร์และโทรศัพท์มือถือ (Responsive Web Application) โดยมี **Google Apps Script** เป็น Backend, **Google Sheets** เป็นฐานข้อมูล และ **Google Drive** สำหรับจัดเก็บไฟล์แนบ
 
 ---
