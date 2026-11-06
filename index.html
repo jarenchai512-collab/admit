@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ระบบรับสมัครเรียนออนไลน์ (โควตา) ๒๕๗๐ | วิทยาลัยเทคนิคท่าหลวงซิเมนต์ไทยอนุสรณ์</title>
+  
+  <!-- ฟอนต์มาตรฐานราชการ Sarabun จาก Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ส่วนหัวของสถานศึกษา (Official College Header) -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="#home" class="brand-wrapper" onclick="App.navigateTo('home')">
+        <img src="assets/logo.png" alt="ตราสัญลักษณ์วิทยาลัยเทคนิคท่าหลวงซิเมนต์ไทยอนุสรณ์" class="college-logo-img" id="college-logo-placeholder" />
+        <div class="brand-text">
+          <h1 class="college-title">วิทยาลัยเทคนิคท่าหลวงซิเมนต์ไทยอนุสรณ์</h1>
+          <div class="college-affiliation">สังกัดสำนักงานคณะกรรมการการอาชีวศึกษา กระทรวงศึกษาธิการ</div>
+        </div>
+      </a>
+      <div class="header-system-tag">
+        ระบบรับสมัครเรียนออนไลน์ (ประเภทโควตา)<br>ประจำปีการศึกษา ๒๕๗๐
+      </div>
+    </div>
+  </header>
+
+  <!-- เมนูหลัก 4 เมนูตามข้อกำหนด (Main Navigation) -->
+  <nav class="site-nav">
+    <div class="container nav-container">
+      <a href="#home" class="nav-link active" data-view="home">หน้าแรก</a>
+      <a href="#apply" class="nav-link" data-view="apply">สมัครเรียน</a>
+      <a href="#status" class="nav-link" data-view="status">ตรวจสอบสถานะ</a>
+      <a href="#staff" class="nav-link" data-view="staff">เจ้าหน้าที่</a>
+    </div>
+  </nav>
+
+  <!-- เนื้อหาหลัก (Main Views) -->
+  <main class="main-content">
+    <div class="container">
+
+      <!-- ============================================================== -->
+      <!-- เมนูที่ 1: หน้าแรก (Home View) -->
+      <!-- ============================================================== -->
+      <section id="view-home" class="view-container">
+        <!-- ประกาศวิทยาลัย -->
+        <div class="card">
+          <div class="card-header-navy" id="home-announcement-title">
+            ประกาศรับสมัครนักเรียน นักศึกษาใหม่ ประเภทโควตา ประจำปีการศึกษา ๒๕๗๐
+          </div>
+          <div class="card-body">
+            <p id="home-announcement-body" style="line-height:1.75; margin-bottom:14px; text-align:justify;">
+              วิทยาลัยเทคนิคท่าหลวงซิเมนต์ไทยอนุสรณ์ มีความประสงค์เปิดรับสมัครบุคคลเพื่อเข้าศึกษาต่อในระดับประกาศนียบัตรวิชาชีพ (ปวช.) และระดับประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.) ประเภทโควตา ประจำปีการศึกษา ๒๕๗๐ ผู้สนใจสามารถยื่นใบสมัครออนไลน์ได้ตั้งแต่วันนี้ถึงวันที่ ๒๘ กุมภาพันธ์ ๒๕๗๐
+            </p>
+            <div class="notice-box">
+              <strong>เกณฑ์คุณสมบัติของผู้สมัครประเภทโควตา:</strong>
+              <div id="home-quota-qual" style="margin-top:4px;">
+                สำเร็จการศึกษาหรือกำลังศึกษาอยู่ในระดับ ม.3, ปวช.3 หรือ ม.6 มีผลการเรียนเฉลี่ยสะสม (GPAX) ไม่ต่ำกว่า 2.00 มีความประพฤติเรียบร้อยและมีหนังสือรับรองจากสถานศึกษาเดิม
+              </div>
+            </div>
+            <div style="margin-top:16px;">
+              <button class="btn btn-primary" onclick="App.navigateTo('apply')">ยื่นใบสมัครเรียนออนไลน์</button>
+              <button class="btn btn-outline" onclick="App.navigateTo('status')" style="margin-left:8px;">ตรวจสอบสถานะการสมัคร</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- กำหนดการรับสมัครโควตา 2570 -->
+        <div class="card">
+          <div class="card-header-navy">กำหนดการรับสมัครนักเรียน นักศึกษาใหม่ (โควตา) ประจำปีการศึกษา ๒๕๗๐</div>
+          <div class="card-body">
+            <table class="schedule-table">
+              <thead>
+                <tr>
+                  <th style="width:250px;">วัน / เดือน / ปี</th>
+                  <th>กิจกรรม / รายละเอียด</th>
+                  <th style="width:180px;">สถานที่ / ช่องทาง</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>๕ มกราคม – ๒๘ กุมภาพันธ์ ๒๕๗๐</td>
+                  <td>รับสมัครเรียนออนไลน์ และส่งเอกสารหลักฐานผ่านระบบ</td>
+                  <td>ระบบรับสมัครออนไลน์ วิทยาลัยฯ</td>
+                </tr>
+                <tr>
+                  <td>๑ – ๒ มีนาคม ๒๕๗๐</td>
+                  <td>คณะกรรมการตรวจสอบคุณสมบัติและเอกสารหลักฐาน</td>
+                  <td>งานทะเบียนและประมวลผล</td>
+                </tr>
+                <tr>
+                  <td>๕ มีนาคม ๒๕๗๐</td>
+                  <td>ประกาศรายชื่อผู้ผ่านการคัดเลือกประเภทโควตา</td>
+                  <td>เว็บไซต์วิทยาลัย และระบบตรวจสอบสถานะ</td>
+                </tr>
+                <tr>
+                  <td>๘ มีนาคม ๒๕๗๐</td>
+                  <td>รายงานตัวและมอบตัวเข้าเป็นนักเรียน นักศึกษาใหม่</td>
+                  <td>หอประชุมวิทยาลัยเทคนิคท่าหลวงฯ</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ระดับและสาขาวิชาที่เปิดรับสมัคร -->
+        <div class="info-callout-grid">
+          <div class="card">
+            <div class="card-header-navy">ระดับประกาศนียบัตรวิชาชีพ (ปวช.) ที่เปิดรับสมัคร</div>
+            <div class="card-body">
+              <p style="font-size:13.5px; color:var(--text-light); margin-bottom:10px;">
+                รับผู้สำเร็จการศึกษาชั้น ม.3 หรือเทียบเท่า (สามารถเลือกได้ ๒ ลำดับสาขาวิชา)
+              </p>
+              <ul class="majors-list" id="home-majors-vocational">
+                <!-- โหลดจาก JavaScript Settings -->
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header-navy">ระดับประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.) ที่เปิดรับสมัคร</div>
+            <div class="card-body">
+              <p style="font-size:13.5px; color:var(--text-light); margin-bottom:10px;">
+                รับผู้สำเร็จการศึกษา ปวช.3 หรือ ม.6 หรือเทียบเท่า (เลือก ๑ สาขาวิชา)
+              </p>
+              <ul class="majors-list" id="home-majors-high-vocational">
+                <!-- โหลดจาก JavaScript Settings -->
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- เอกสารที่ต้องเตรียมและข้อมูลติดต่อ -->
+        <div class="info-callout-grid">
+          <div class="card">
+            <div class="card-header-navy">เอกสารและหลักฐานที่ต้องเตรียมในการสมัคร</div>
+            <div class="card-body">
+              <ul class="doc-requirement-list">
+                <li>• <strong>รูปถ่ายหน้าตรงขนาด ๑ นิ้ว:</strong> สวมเครื่องแบบนักเรียนเดิมหรือชุดสุภาพ หน้าตรงไม่สวมหมวก ถ่ายไว้ไม่เกิน ๖ เดือน (ไฟล์ JPG/PNG)</li>
+                <li>• <strong>ระเบียนแสดงผลการเรียน (ปพ.๑):</strong> หรือเอกสารแสดงผลการเรียนเฉลี่ยสะสม ๕ ภาคเรียน (ไฟล์ PDF/JPG)</li>
+                <li>• <strong>สำเนาบัตรประจำตัวประชาชน หรือสำเนาทะเบียนบ้าน:</strong> พร้อมรับรองสำเนาถูกต้อง (ไฟล์ PDF/JPG)</li>
+                <li>• <strong>เกียรติบัตร / ใบรับรองความสามารถพิเศษ:</strong> (ถ้ามี) สำหรับประกอบการพิจารณาประเภทโควตา</li>
+              </ul>
+              <div style="font-size:12px; color:var(--text-light); margin-top:8px;">* ขนาดไฟล์ไม่เกิน ๕ MB ต่อรายการ</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header-navy">ข้อมูลติดต่อและสอบถามเพิ่มเติม</div>
+            <div class="card-body">
+              <p><strong>งานรับสมัครและแนะแนวการศึกษา:</strong></p>
+              <p>วิทยาลัยเทคนิคท่าหลวงซิเมนต์ไทยอนุสรณ์</p>
+              <p>เลขที่ ๒๙๐ หมู่ ๘ ตำบลบ้านครัว อำเภอบ้านหมอ จังหวัดสระบุรี ๑๘๒๗๐</p>
+              <p style="margin-top:6px;"><strong>โทรศัพท์:</strong> 0-3628-1295, 036-331004</p>
+              <p><strong>โทรสาร:</strong> 0-3628-3532</p>
+              <p><strong>อีเมล:</strong> saraban@tl.ac.th</p>
+              <p><strong>เว็บไซต์หลัก:</strong> <a href="http://www.tl.ac.th" target="_blank" style="color:var(--primary-navy);">www.tl.ac.th</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================== -->
+      <!-- เมนูที่ 2: สมัครเรียน (Application Form View) -->
+      <!-- ============================================================== -->
+      <section id="view-apply" class="view-container" style="display:none;">
+        
+        <!-- กล่องแจ้งเตือนกรณีปิดรับสมัคร -->
+        <div id="apply-closed-alert" class="alert-box alert-error" style="display:none;">
+          ขณะนี้ระบบปิดรับสมัครเรียนออนไลน์ชั่วคราว หากมีข้อสงสัยกรุณาติดต่อแผนกงานทะเบียนและรับสมัคร วิทยาลัยเทคนิคท่าหลวงซิเมนต์ไทยอนุสรณ์
+        </div>
+
+        <!-- กล่องแสดงเมื่อส่งใบสมัครสำเร็จ -->
+        <div id="apply-success-box" style="display:none;"></div>
+
+        <!-- แบบฟอร์มใบสมัครหลัก ตรงตามใบสมัครกระดาษ ข้อ 1 - 6 -->
+        <div class="card" id="main-apply-form-container">
+          <div class="card-header-navy">
+            แบบฟอร์มใบสมัครคัดเลือกเข้าศึกษาต่อ (ประเภทโควตา) ประจำปีการศึกษา ๒๕๗๐
+          </div>
+          <div class="card-body">
+            <p style="font-size:13.5px; color:var(--text-light); margin-bottom:16px;">
+              กรุณากรอกข้อมูลตามความเป็นจริงให้ครบถ้วนทุกข้อ โดยอ้างอิงตามหลักฐานทางราชการ (ป้ายกำกับที่มีเครื่องหมาย <span style="color:#DC2626;">*</span> คือช่องที่ต้องกรอก)
+            </p>
+
+            <form id="main-apply-form">
+              <!-- เลือกระดับชั้นที่ต้องการสมัคร -->
+              <div class="form-group">
+                <label class="form-label">ระดับชั้นที่ต้องการสมัครเข้าศึกษาต่อ <span class="required">*</span></label>
+                <div class="radio-group-level">
+                  <label class="radio-item">
+                    <input type="radio" name="app-level" value="ปวช." checked />
+                    <span>ประกาศนียบัตรวิชาชีพ (ปวช.)</span>
+                  </label>
+                  <label class="radio-item">
+                    <input type="radio" name="app-level" value="ปวส. (สายตรง)" />
+                    <span>ประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.) - สายตรง (จบ ปวช.)</span>
+                  </label>
+                  <label class="radio-item">
+                    <input type="radio" name="app-level" value="ปวส. (ม.6/ปวช. ต่างสาขา)" />
+                    <span>ประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.) - ม.6 / ต่างสาขาวิชา</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- ข้อ ๑. ข้อมูลผู้สมัคร -->
+              <div class="form-section-title">๑. ข้อมูลผู้สมัคร</div>
+              <div class="form-grid-4">
+                <div class="form-group">
+                  <label for="app-prefix" class="form-label">คำนำหน้าชื่อ <span class="required">*</span></label>
+                  <select id="app-prefix" class="form-select" required>
+                    <option value="นาย">นาย</option>
+                    <option value="นางสาว">นางสาว</option>
+                    <option value="เด็กชาย">เด็กชาย</option>
+                    <option value="เด็กหญิง">เด็กหญิง</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="app-firstname" class="form-label">ชื่อ <span class="required">*</span></label>
+                  <input type="text" id="app-firstname" class="form-input" required placeholder="ระบุชื่อจริง" />
+                </div>
+                <div class="form-group">
+                  <label for="app-lastname" class="form-label">นามสกุล <span class="required">*</span></label>
+                  <input type="text" id="app-lastname" class="form-input" required placeholder="ระบุนามสกุล" />
+                </div>
+                <div class="form-group">
+                  <label for="app-birthdate" class="form-label">วัน/เดือน/ปีเกิด (พ.ศ.) <span class="required">*</span></label>
+                  <input type="text" id="app-birthdate" class="form-input" required placeholder="เช่น 15/05/2555" />
+                  <div class="field-hint">ระบุ วัน/เดือน/ปี พ.ศ.</div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="app-id-card" class="form-label">เลขประจำตัวประชาชน (๑๓ หลัก) <span class="required">*</span></label>
+                <input type="text" id="app-id-card" class="form-input" maxlength="17" required placeholder="X-XXXX-XXXXX-XX-X" autocomplete="off" />
+                <div class="field-hint">ระบบจะตรวจสอบความถูกต้องของเลขประจำตัวประชาชนตามหลักเกณฑ์การคำนวณ</div>
+                <div id="error-id-card" class="field-error" style="display:none;"></div>
+              </div>
+
+              <!-- ข้อ ๒. ข้อมูลบิดา -->
+              <div class="form-section-title">๒. ข้อมูลบิดา</div>
+              <div class="form-grid-3">
+                <div class="form-group">
+                  <label for="app-father-name" class="form-label">ชื่อ - สกุล บิดา <span class="required">*</span></label>
+                  <input type="text" id="app-father-name" class="form-input" required placeholder="เช่น นายประสิทธิ์ รักการเรียน" />
+                </div>
+                <div class="form-group">
+                  <label for="app-father-age" class="form-label">อายุ (ปี)</label>
+                  <input type="number" id="app-father-age" class="form-input" min="20" max="100" placeholder="เช่น 48" />
+                </div>
+                <div class="form-group">
+                  <label for="app-father-job" class="form-label">อาชีพ <span class="required">*</span></label>
+                  <input type="text" id="app-father-job" class="form-input" required placeholder="เช่น รับราชการ, พนักงานบริษัท, ค้าขาย" />
+                </div>
+              </div>
+
+              <!-- ข้อ ๓. ข้อมูลมารดา -->
+              <div class="form-section-title">๓. ข้อมูลมารดา</div>
+              <div class="form-grid-3">
+                <div class="form-group">
+                  <label for="app-mother-name" class="form-label">ชื่อ - สกุล มารดา <span class="required">*</span></label>
+                  <input type="text" id="app-mother-name" class="form-input" required placeholder="เช่น นางสุภาพร รักการเรียน" />
+                </div>
+                <div class="form-group">
+                  <label for="app-mother-age" class="form-label">อายุ (ปี)</label>
+                  <input type="number" id="app-mother-age" class="form-input" min="20" max="100" placeholder="เช่น 46" />
+                </div>
+                <div class="form-group">
+                  <label for="app-mother-job" class="form-label">อาชีพ <span class="required">*</span></label>
+                  <input type="text" id="app-mother-job" class="form-input" required placeholder="เช่น ค้าขาย, เกษตรกร, รับจ้าง" />
+                </div>
+              </div>
+
+              <!-- ข้อ ๔. ที่อยู่ปัจจุบันที่ติดต่อได้ -->
+              <div class="form-section-title">๔. ที่อยู่ปัจจุบันที่ติดต่อได้</div>
+              <div class="form-grid-4">
+                <div class="form-group">
+                  <label for="app-house-no" class="form-label">บ้านเลขที่ <span class="required">*</span></label>
+                  <input type="text" id="app-house-no" class="form-input" required placeholder="เช่น 45/2" />
+                </div>
+                <div class="form-group">
+                  <label for="app-moo" class="form-label">หมู่ที่</label>
+                  <input type="text" id="app-moo" class="form-input" placeholder="เช่น 3 (หากไม่มีใส่ -)" />
+                </div>
+                <div class="form-group">
+                  <label for="app-soi" class="form-label">ตรอก/ซอย</label>
+                  <input type="text" id="app-soi" class="form-input" placeholder="หากไม่มีใส่ -" />
+                </div>
+                <div class="form-group">
+                  <label for="app-road" class="form-label">ถนน</label>
+                  <input type="text" id="app-road" class="form-input" placeholder="หากไม่มีใส่ -" />
+                </div>
+              </div>
+
+              <div class="form-grid-4">
+                <div class="form-group">
+                  <label for="app-subdistrict" class="form-label">ตำบล / แขวง <span class="required">*</span></label>
+                  <input type="text" id="app-subdistrict" class="form-input" required placeholder="ระบุตำบล" />
+                </div>
+                <div class="form-group">
+                  <label for="app-district" class="form-label">อำเภอ / เขต <span class="required">*</span></label>
+                  <input type="text" id="app-district" class="form-input" required placeholder="ระบุอำเภอ" />
+                </div>
+                <div class="form-group">
+                  <label for="app-province" class="form-label">จังหวัด <span class="required">*</span></label>
+                  <select id="app-province" class="form-select" required>
+                    <!-- ดึง 77 จังหวัด จาก thai-provinces.js -->
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="app-postal-code" class="form-label">รหัสไปรษณีย์ <span class="required">*</span></label>
+                  <input type="text" id="app-postal-code" class="form-input" maxlength="5" required placeholder="เช่น 18270" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="app-phone" class="form-label">หมายเลขโทรศัพท์ที่ติดต่อได้ (๑๐ หลัก) <span class="required">*</span></label>
+                <input type="tel" id="app-phone" class="form-input" maxlength="12" required placeholder="0XX-XXX-XXXX" />
+                <div class="field-hint">ใช้สำหรับติดต่อแจ้งผลการคัดเลือกและกำหนดการรายงานตัว</div>
+                <div id="error-phone" class="field-error" style="display:none;"></div>
+              </div>
+
+              <!-- ข้อ ๕. ข้อมูลการศึกษาเดิม / กำลังศึกษา -->
+              <div class="form-section-title">๕. ข้อมูลการศึกษาเดิม / กำลังศึกษา</div>
+              <div class="form-grid-3">
+                <div class="form-group">
+                  <label for="app-grade" class="form-label">ระดับชั้นที่กำลังศึกษา / สำเร็จการศึกษา <span class="required">*</span></label>
+                  <input type="text" id="app-grade" class="form-input" required placeholder="เช่น ม.3, ปวช.3, ม.6" />
+                </div>
+                <div class="form-group">
+                  <label for="app-school-name" class="form-label">ชื่อสถานศึกษา / โรงเรียนเดิม <span class="required">*</span></label>
+                  <input type="text" id="app-school-name" class="form-input" required placeholder="เช่น โรงเรียนบ้านหมอ 'พัฒนานุกูล'" />
+                </div>
+                <div class="form-group">
+                  <label for="app-school-loc" class="form-label">ที่ตั้งสถานศึกษา (ตำบล อำเภอ จังหวัด) <span class="required">*</span></label>
+                  <input type="text" id="app-school-loc" class="form-input" required placeholder="เช่น ต.บ้านหมอ อ.บ้านหมอ จ.สระบุรี" />
+                </div>
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="app-gpax" class="form-label">ผลการเรียนเฉลี่ยสะสม (GPAX) <span class="required">*</span></label>
+                  <input type="number" id="app-gpax" class="form-input" step="0.01" min="0.00" max="4.00" required placeholder="0.00 - 4.00" />
+                  <div class="field-hint">ผู้สมัครโควตาต้องมีผลการเรียนเฉลี่ยสะสมไม่ต่ำกว่า 2.00</div>
+                  <div id="error-gpax" class="field-error" style="display:none;"></div>
+                </div>
+                <div class="form-group">
+                  <label for="app-old-major" class="form-label">สาขาวิชาเดิม (กรณีจบ ปวช. หรือ ปวส.)</label>
+                  <input type="text" id="app-old-major" class="form-input" placeholder="เช่น การบัญชี, ช่างยนต์ (ม.3 ให้ใส่ สามัญ)" />
+                </div>
+              </div>
+
+              <!-- ข้อ ๖. สาขาวิชาที่ต้องการสมัคร -->
+              <div class="form-section-title">๖. สาขาวิชาที่ประสงค์สมัครเข้าศึกษาต่อ</div>
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="app-major-1" class="form-label">สาขาวิชาที่เลือก (อันดับ ๑) <span class="required">*</span></label>
+                  <select id="app-major-1" class="form-select" required>
+                    <!-- ดึงจาก Settings Dynamic -->
+                  </select>
+                </div>
+                <div class="form-group" id="group-major-2">
+                  <label for="app-major-2" class="form-label">สาขาวิชาที่เลือก (สำรอง อันดับ ๒ - เฉพาะ ปวช.) <span class="required">*</span></label>
+                  <select id="app-major-2" class="form-select">
+                    <!-- ดึงจาก Settings Dynamic ห้ามซ้ำกับอันดับ 1 -->
+                  </select>
+                </div>
+              </div>
+
+              <!-- ส่วนอัปโหลดเอกสารหลักฐาน (JPG/PNG/PDF ไม่เกิน 5MB) -->
+              <div class="form-section-title">เอกสารหลักฐานประกอบการสมัคร (ขนาดไฟล์ไม่เกิน ๕ MB ต่อรายการ)</div>
+              <div class="upload-grid">
+                <!-- ไฟล์ที่ 1: รูปถ่ายหน้าตรงขนาด 1 นิ้ว (บังคับ) -->
+                <div class="form-group">
+                  <label class="form-label">๑. รูปถ่ายหน้าตรงขนาด ๑ นิ้ว (JPG/PNG) <span class="required">*</span></label>
+                  <div class="file-dropzone" id="dropzone-photo">
+                    <div class="dropzone-label">คลิกเพื่อเลือกไฟล์ หรือลากไฟล์มาวางที่นี่</div>
+                    <div class="dropzone-desc">ไฟล์ภาพถ่ายหน้าตรงขนาด ๑ นิ้ว พื้นหลังสุภาพ</div>
+                    <input type="file" id="file-photo" accept=".jpg,.jpeg,.png" style="display:none;" />
+                  </div>
+                  <div id="preview-photo" style="display:none;"></div>
+                  <div id="error-file-photo" class="field-error" style="display:none;"></div>
+                </div>
+
+                <!-- ไฟล์ที่ 2: ผลการเรียนเฉลี่ยสะสม 5 ภาคเรียน (ปพ.1) (บังคับ) -->
+                <div class="form-group">
+                  <label class="form-label">๒. ระเบียนแสดงผลการเรียน (ปพ.๑) ๕ ภาคเรียน <span class="required">*</span></label>
+                  <div class="file-dropzone" id="dropzone-transcript">
+                    <div class="dropzone-label">คลิกเพื่อเลือกไฟล์ หรือลากไฟล์มาวางที่นี่</div>
+                    <div class="dropzone-desc">ไฟล์เอกสาร ปพ.๑ หรือใบรับรองผลการเรียนสะสม (PDF/JPG/PNG)</div>
+                    <input type="file" id="file-transcript" accept=".jpg,.jpeg,.png,.pdf" style="display:none;" />
+                  </div>
+                  <div id="preview-transcript" style="display:none;"></div>
+                  <div id="error-file-transcript" class="field-error" style="display:none;"></div>
+                </div>
+
+                <!-- ไฟล์ที่ 3: สำเนาบัตรประชาชน หรือสำเนาทะเบียนบ้าน (บังคับ) -->
+                <div class="form-group">
+                  <label class="form-label">๓. สำเนาบัตรประจำตัวประชาชน / สำเนาทะเบียนบ้าน <span class="required">*</span></label>
+                  <div class="file-dropzone" id="dropzone-idCopy">
+                    <div class="dropzone-label">คลิกเพื่อเลือกไฟล์ หรือลากไฟล์มาวางที่นี่</div>
+                    <div class="dropzone-desc">สำเนาบัตรประชาชน หรือทะเบียนบ้านที่ลงนามรับรองสำเนา (PDF/JPG/PNG)</div>
+                    <input type="file" id="file-idCopy" accept=".jpg,.jpeg,.png,.pdf" style="display:none;" />
+                  </div>
+                  <div id="preview-idCopy" style="display:none;"></div>
+                  <div id="error-file-idCopy" class="field-error" style="display:none;"></div>
+                </div>
+
+                <!-- ไฟล์ที่ 4: สำเนาเกียรติบัตร / ใบประกาศนียบัตร (ไม่บังคับ) -->
+                <div class="form-group">
+                  <label class="form-label">๔. เกียรติบัตร / ใบรับรองความสามารถพิเศษ (ถ้ามี)</label>
+                  <div class="file-dropzone" id="dropzone-cert">
+                    <div class="dropzone-label">คลิกเพื่อเลือกไฟล์ หรือลากไฟล์มาวางที่นี่</div>
+                    <div class="dropzone-desc">เอกสารแสดงความสามารถพิเศษ ผลงาน หรือใบประกาศ (PDF/JPG/PNG)</div>
+                    <input type="file" id="file-cert" accept=".jpg,.jpeg,.png,.pdf" style="display:none;" />
+                  </div>
+                  <div id="preview-cert" style="display:none;"></div>
+                  <div id="error-file-cert" class="field-error" style="display:none;"></div>
+                </div>
+              </div>
+
+              <!-- ข้อความยินยอมการเก็บข้อมูลส่วนบุคคล (PDPA) -->
+              <div class="pdpa-box">
+                <label class="checkbox-container">
+                  <input type="checkbox" id="app-pdpa-consent" required />
+                  <span>
+                    <strong>การยินยอมให้จัดเก็บและประมวลผลข้อมูลส่วนบุคคล (PDPA):</strong> ข้าพเจ้ายินยอมให้วิทยาลัยเทคนิคท่าหลวงซิเมนต์ไทยอนุสรณ์ จัดเก็บ ใช้ และประมวลผลข้อมูลส่วนบุคคลและเอกสารหลักฐานประกอบการสมัคร เพื่อประโยชน์ในการคัดเลือกเข้าศึกษาต่อและการบริหารงานทะเบียนนักเรียนนักศึกษาตาม พ.ร.บ. คุ้มครองข้อมูลส่วนบุคคล พ.ศ. ๒๕๖๒ และขอรับรองว่าข้อมูลทั้งหมดข้างต้นเป็นความจริงทุกประการ
+                  </span>
+                </label>
+              </div>
+
+              <!-- ปุ่มส่งใบสมัคร -->
+              <div class="form-actions" style="text-align:center; margin-top:20px;">
+                <button type="submit" id="btn-submit-app" class="btn btn-primary" style="padding:10px 32px; font-size:15px;">
+                  ส่งใบสมัครเรียนออนไลน์
+                </button>
+                <button type="reset" class="btn btn-outline" style="margin-left:10px;" onclick="App.resetApplyForm()">
+                  ล้างข้อมูลฟอร์ม
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================== -->
+      <!-- เมนูที่ 3: ตรวจสอบสถานะ (Status View) -->
+      <!-- ============================================================== -->
+      <section id="view-status" class="view-container" style="display:none;">
+        <div class="card" style="max-width:760px; margin:0 auto 20px auto;">
+          <div class="card-header-navy">ตรวจสอบสถานะการสมัครเรียนและผลการคัดเลือก</div>
+          <div class="card-body">
+            <p style="font-size:13.5px; color:var(--text-light); margin-bottom:14px;">
+              กรุณาระบุเลขประจำตัวประชาชน ๑๓ หลักของผู้สมัคร เพื่อค้นหาผลการสมัครและข้อความแจ้งเตือนจากเจ้าหน้าที่
+            </p>
+            
+            <form onsubmit="App.handleStatusLookup(event)">
+              <div class="form-group">
+                <label for="status-search-id" class="form-label">เลขประจำตัวประชาชน (๑๓ หลัก):</label>
+                <div style="display:flex; gap:10px;">
+                  <input type="text" id="status-search-id" class="form-input" maxlength="17" placeholder="X-XXXX-XXXXX-XX-X" required style="font-size:16px; font-family:monospace;" />
+                  <button type="submit" class="btn btn-primary" style="white-space:nowrap; padding:0 24px;">ค้นหาข้อมูล</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- กล่องแสดงผลการค้นหาสถานะ -->
+        <div id="status-result-box" style="max-width:760px; margin:0 auto; display:none;"></div>
+      </section>
+
+      <!-- ============================================================== -->
+      <!-- เมนูที่ 4: ส่วนเจ้าหน้าที่ (Staff & Admin View) -->
+      <!-- ============================================================== -->
+      <section id="view-staff" class="view-container" style="display:none;">
+        <div id="staff-portal-content">
+          <!-- โหลดโดย AdminPortal.checkSession() -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ส่วนท้ายของเว็บ (Official Footer) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div class="footer-college-name">วิทยาลัยเทคนิคท่าหลวงซิเมนต์ไทยอนุสรณ์</div>
+          <div>สังกัดสำนักงานคณะกรรมการการอาชีวศึกษา กระทรวงศึกษาธิการ</div>
+          <div style="margin-top:4px;">เลขที่ ๒๙๐ หมู่ ๘ ตำบลบ้านครัว อำเภอบ้านหมอ จังหวัดสระบุรี ๑๘๒๗๐</div>
+        </div>
+        <div>
+          <div><strong>โทรศัพท์:</strong> 0-3628-1295, 036-331004</div>
+          <div><strong>โทรสาร:</strong> 0-3628-3532</div>
+          <div><strong>อีเมล:</strong> saraban@tl.ac.th</div>
+          <div><strong>เว็บไซต์:</strong> <a href="http://www.tl.ac.th" target="_blank" style="color:#FFF;">www.tl.ac.th</a></div>
+        </div>
+      </div>
+      <div class="footer-developer-credit">
+        ระบบรับสมัครเรียนออนไลน์ (ประเภทโควตา) ประจำปีการศึกษา ๒๕๗๐ | พัฒนาโดย แผนกวิชาเทคโนโลยีคอมพิวเตอร์ วิทยาลัยเทคนิคท่าหลวงซิเมนต์ไทยอนุสรณ์
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/thai-provinces.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/gas-api.js"></script>
+  <script src="js/pdf-generator.js"></script>
+  <script src="js/admin.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
